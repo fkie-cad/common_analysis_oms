@@ -1,10 +1,6 @@
-'''
-Created on Mar 24, 2016
-
-@author: weidenba
-'''
 import unittest
 from os import path
+from time import time
 
 from common_analysis_oms.oms import CommonAnalysisOMS
 
@@ -39,6 +35,13 @@ class Test(unittest.TestCase):
         result = self.oms.scan_file(MALICIOUS_FILE_PATH)
         self.assertEqual(result["positives"], result['number_of_scanners'])
         self.assertTrue(False not in [result["scans"][av]["detected"] for av in result["scans"]])
+
+    def test_analyze_file(self):
+        result = self.oms.analyze_file(MALICIOUS_FILE_PATH)
+        self.assertGreater(result['positives'], 0, "should be at least 1")
+        self.assertIn('scans', result, "scans not in result")
+        self.assertIn('plugin_version', result, "plugin_version not in results")
+        self.assertAlmostEqual(result['analysis_date'], time(), msg="Time not correct. This test might fail, if you installed many AVs", delta=120)
 
 
 if __name__ == "__main__":

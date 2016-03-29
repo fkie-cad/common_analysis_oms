@@ -6,22 +6,27 @@ import hashlib
 import json
 from re import findall
 from subprocess import Popen, PIPE
-from time import time
 from os import listdir, path
 from distutils import spawn
 import logging
 
-system_version = get_version_string_from_git(get_directory_for_filename(__file__))
+plugin_version = get_version_string_from_git(get_directory_for_filename(__file__))
+system_version = "OMS 0.2.1"
 
 
 class CommonAnalysisOMS(AnalysisPluginFile):
+    """
+    The OMS plugin scans a file with several malware scanners.
+
+    :iconst av_list: List of installed malware scanners
+    """
 
     av_list = []
     BASE_DIR = path.dirname(path.abspath(__file__))
     PLUGIN_DIR = path.join(BASE_DIR, "plugins")
 
     def __init__(self):
-        super(CommonAnalysisOMS, self).__init__(system_version)
+        super(CommonAnalysisOMS, self).__init__(plugin_version, system_version=system_version)
         self.load_plugins()
         self.result_dict = {}
 
@@ -97,10 +102,9 @@ class CommonAnalysisOMS(AnalysisPluginFile):
     def scan_file(self, file_to_analyze):
         self.result_dict
         self.result_dict["positives"] = 0
-        self.result_dict["scan_date"] = time()
         self.result_dict["md5"] = self.get_md5(file_to_analyze)
         self.result_dict["scanners"] = [av["name"] for av in self.av_list]
         self.result_dict["number_of_scanners"] = len(self.result_dict["scanners"])
         self.result_dict["scans"] = self.execute_scans(file_to_analyze)
-        logging.debug(json.dumps(self.result_dict, indent=2))
+        logging.debug(self.result_dict)
         return self.result_dict
