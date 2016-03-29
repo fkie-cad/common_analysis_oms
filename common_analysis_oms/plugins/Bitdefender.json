@@ -1,0 +1,6 @@
+{
+    "re_infected": "Infected files:[ ](\\d)",
+    "re_malware_name": "infected:[ ]([^\\n]+)",
+    "name": "Bitdefender",
+    "command": "bdscan $filepath"
+}

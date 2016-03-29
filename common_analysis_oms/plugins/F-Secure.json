@@ -1,0 +1,6 @@
+{
+    "re_infected": "file infected",
+    "re_malware_name": "fected: ([^\\n]+) \\[",
+    "name": "F-Secure Anti-Virus CLI",
+    "command": "fsav --action1=report $filepath"
+}

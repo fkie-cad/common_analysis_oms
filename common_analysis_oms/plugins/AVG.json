@@ -1,0 +1,6 @@
+{
+    "re_infected": "Infec[\\D]+([\\d])",
+    "re_malware_name": "\\x1b[^ ]+  ([^\\n\\x1b:]+)\\n",
+    "name": "AVG",
+    "command": "avgscan $filepath"
+}

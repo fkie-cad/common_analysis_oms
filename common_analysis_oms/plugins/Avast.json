@@ -1,0 +1,6 @@
+{
+    "re_infected": "infected files:[\\W]+(\\d)",
+    "re_malware_name": "infected by:([^\\n]+)\\]",
+    "name": "Avast",
+    "command": "avast $filepath"
+}

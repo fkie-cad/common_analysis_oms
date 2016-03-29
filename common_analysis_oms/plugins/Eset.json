@@ -1,0 +1,6 @@
+{
+    "re_infected": "Infec[^\\n]+es - ([\\d])",
+    "re_malware_name": "threat=\"([^\"]+)\"",
+    "name": "ESET Command-line scanner",
+    "command": "esets_scan --clean-mode=none $filepath"
+}

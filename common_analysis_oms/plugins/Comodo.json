@@ -1,0 +1,6 @@
+{
+    "re_infected": "Found Viruses:[ ](\\d)",
+    "re_malware_name": "Malware Name is ([^\\n]+)\\n",
+    "name": "Comodo Antivirus",
+    "command": "/opt/COMODO/cmdscan -vs $filepath"
+}

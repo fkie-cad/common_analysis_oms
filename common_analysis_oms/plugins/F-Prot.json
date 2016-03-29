@@ -1,0 +1,6 @@
+{
+    "re_infected": "Infected objects: ([\\w])",
+    "re_malware_name": "] <([^>]+)>",
+    "name": "F-PROT Antivirus",
+    "command": "fpscan $filepath"
+}

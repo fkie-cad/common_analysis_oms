@@ -1,0 +1,6 @@
+{
+    "re_infected": "Possibly Infected[^\\d]+([\\d])",
+    "re_malware_name": "Found the ([^\n]+) !!!",
+    "name": "McAfee VirusScan Command Line",
+    "command": "uvscan --summary $filepath"
+}
