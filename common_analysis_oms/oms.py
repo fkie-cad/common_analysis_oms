@@ -9,8 +9,13 @@ from subprocess import Popen, PIPE
 from os import listdir, path
 from distutils import spawn
 import logging
+import pkg_resources
 
-plugin_version = get_version_string_from_git(get_directory_for_filename(__file__))
+try:
+    plugin_version = pkg_resources.get_distribution("common_analysis_oms")
+except:
+    plugin_version = get_version_string_from_git(get_directory_for_filename(__file__))
+
 system_version = "OMS 0.2.1"
 
 
