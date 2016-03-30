@@ -10,9 +10,11 @@ from os import listdir, path
 from distutils import spawn
 import logging
 import pkg_resources
+from time import time
 
+# can be removed when common analysis base is fixed
 try:
-    plugin_version = pkg_resources.get_distribution("common_analysis_oms")
+    plugin_version = pkg_resources.get_distribution("common_analysis_oms").version
 except:
     plugin_version = get_version_string_from_git(get_directory_for_filename(__file__))
 
@@ -111,5 +113,7 @@ class CommonAnalysisOMS(AnalysisPluginFile):
         self.result_dict["scanners"] = [av["name"] for av in self.av_list]
         self.result_dict["number_of_scanners"] = len(self.result_dict["scanners"])
         self.result_dict["scans"] = self.execute_scans(file_to_analyze)
+        # can be removed when common_analysis base is fixed
+        self.result_dict["analysis_date"] = time()
         logging.debug(self.result_dict)
         return self.result_dict
