@@ -1,6 +1,0 @@
-{
-    "re_infected": "infiziert",
-    "re_malware_name": "'([^\\n]+)' gefunden in",
-    "name": "Sophos",
-    "command": "savscan $filepath"
-}

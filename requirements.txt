@@ -1,0 +1,3 @@
+nose
+git+ssh://git@atlassian-net.cs.uni-bonn.de:7999/ca/common_analysis_base.git
+git+ssh://git@atlassian-net.cs.uni-bonn.de:7999/ch/common_helper_files.git
