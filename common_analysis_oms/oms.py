@@ -18,7 +18,7 @@ try:
 except:
     plugin_version = get_version_string_from_git(get_directory_for_filename(__file__))
 
-system_version = "OMS 0.2.1"
+system_version = "OMS 0.2.2"
 
 
 class CommonAnalysisOMS(AnalysisPluginFile):
