@@ -1,2 +1,5 @@
 __pycache__
 .settings
+dist
+build
+common_analysis_oms.egg-info
