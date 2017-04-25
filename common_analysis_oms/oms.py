@@ -66,7 +66,7 @@ class CommonAnalysisOMS(AnalysisPluginFile):
             self.result_dict["positives"] += 1
         else:
             finding = "clean"
-        print("result: " + finding)
+        logging.debug("result: " + finding)
         return {"result": finding,
                 "detected": finding != "clean",
                 "version": self.get_av_scan_result(av, "--version")}
@@ -80,7 +80,7 @@ class CommonAnalysisOMS(AnalysisPluginFile):
     def execute_scans(self, filepath):
         result = {}
         for av in self.av_list:
-            print("Starting scan with {} ({}/{})".format(av["name"],
+            logging.debug("Starting scan with {} ({}/{})".format(av["name"],
                   self.av_list.index(av) + 1, self.result_dict["number_of_scanners"]))
             scanresult = self.get_av_scan_result(av, repr(path.abspath(filepath)))
             logging.debug(repr(scanresult))
