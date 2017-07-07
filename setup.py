@@ -1,10 +1,9 @@
-import os
-import subprocess
 from setuptools import setup, find_packages
+from common_analysis_oms import __version__
 
 setup(
     name="common_analysis_oms",
-    version=subprocess.check_output(['git', 'describe', '--always'], cwd=os.path.dirname(os.path.abspath(__file__))).strip().decode('utf-8'),
+    version=__version__,
     packages=find_packages(),
     data_files=[('common_analysis_oms/plugins', ['common_analysis_oms/plugins/ClamAV.json',
                                                  'common_analysis_oms/plugins/Sophos_en.json',
@@ -19,5 +18,14 @@ setup(
     install_requires=[
         'common_analysis_base',
         'common_helper_files'
-    ]
+    ],
+    dependency_links=[
+        'git+https://github.com/mass-project/common_helper_files.git#common_helper_files'
+        'git+https://github.com/mass-project/common_analysis_base.git'
+    ],
+    author="Fraunhofer FKIE",
+    author_email="peter.weidenbach@fkie.fraunhofer.de",
+    url="http://www.fkie.fraunhofer.de",
+    description="Offline Malware Scanner (OMS) scans files with multiple locally installed malware scanners",
+    license="GPL-3.0"
 )

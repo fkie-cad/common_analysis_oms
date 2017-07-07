@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 from common_analysis_base import AnalysisPluginFile
-from common_helper_files import get_directory_for_filename, get_version_string_from_git
 
 import hashlib
 import json
@@ -9,16 +8,12 @@ from subprocess import Popen, PIPE
 from os import listdir, path
 from distutils import spawn
 import logging
-import pkg_resources
 from time import time
+from common_analysis_oms import __version__
 
-# can be removed when common analysis base is fixed
-try:
-    plugin_version = pkg_resources.get_distribution("common_analysis_oms").version
-except:
-    plugin_version = get_version_string_from_git(get_directory_for_filename(__file__))
+plugin_version = __version__
 
-system_version = "OMS 0.2.2"
+system_version = plugin_version
 
 
 class CommonAnalysisOMS(AnalysisPluginFile):
@@ -81,7 +76,7 @@ class CommonAnalysisOMS(AnalysisPluginFile):
         result = {}
         for av in self.av_list:
             logging.debug("Starting scan with {} ({}/{})".format(av["name"],
-                  self.av_list.index(av) + 1, self.result_dict["number_of_scanners"]))
+                                                                 self.av_list.index(av) + 1, self.result_dict["number_of_scanners"]))
             scanresult = self.get_av_scan_result(av, repr(path.abspath(filepath)))
             logging.debug(repr(scanresult))
             result[av["name"]] = self.parse_scan_result(scanresult, av)

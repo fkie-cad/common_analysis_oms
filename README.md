@@ -2,8 +2,6 @@
 
 This module scans a file with several malware scanners installed locally.
 
-This Plug-in is an adaption of: https://atlassian-net.cs.uni-bonn.de/stash/projects/MAL/repos/offline_malware_scanner/browse
-
 ## Supported Scanners
 * Avast
 * AVG
@@ -17,6 +15,9 @@ This Plug-in is an adaption of: https://atlassian-net.cs.uni-bonn.de/stash/proje
 * Sophos
 
 ## Requriements
-At least one AV-Scanner must be installed.
+At least one AV-scanner must be installed.
 We recommand:
 ClamAV including ClamAV-Daemon and Clamdscan
+
+## Known Issues
+If your system language is not set to english, some scanner plug-ins might not work correctly.
