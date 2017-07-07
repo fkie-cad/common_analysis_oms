@@ -1,4 +1,4 @@
-# Offline Maleware Scanner (OMS) Common Analysis Module
+# Offline Malware Scanner (OMS) Common Analysis Module
 
 This module scans a file with several malware scanners installed locally.
 
