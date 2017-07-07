@@ -1,6 +1,6 @@
-from .oms import CommonAnalysisOMS
+from .oms import CommonAnalysisOMS, plugin_version
 
-__version__ = "0.2.3"
+__version__ = plugin_version
 
 __all__ = [
     'CommonAnalysisOMS'

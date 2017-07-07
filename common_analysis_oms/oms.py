@@ -1,17 +1,15 @@
 # -*- coding: utf-8 -*-
 from common_analysis_base import AnalysisPluginFile
-
+from distutils import spawn
 import hashlib
 import json
+import logging
+from os import listdir, path
 from re import findall
 from subprocess import Popen, PIPE
-from os import listdir, path
-from distutils import spawn
-import logging
 from time import time
-from common_analysis_oms import __version__
 
-plugin_version = __version__
+plugin_version = "0.2.3"
 
 system_version = plugin_version
 
