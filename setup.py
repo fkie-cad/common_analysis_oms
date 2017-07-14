@@ -17,10 +17,8 @@ setup(
                                                  'common_analysis_oms/plugins/McAfee.json'])],
     install_requires=[
         'common_analysis_base',
-        'common_helper_files'
     ],
     dependency_links=[
-        'git+https://github.com/mass-project/common_helper_files.git#common_helper_files',
         'git+https://github.com/mass-project/common_analysis_base.git#common_analysis_base'
     ],
     author="Fraunhofer FKIE",
