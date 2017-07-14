@@ -20,7 +20,7 @@ setup(
         'common_helper_files'
     ],
     dependency_links=[
-        'git+https://github.com/mass-project/common_helper_files.git#common_helper_files'
+        'git+https://github.com/mass-project/common_helper_files.git#common_helper_files',
         'git+https://github.com/mass-project/common_analysis_base.git'
     ],
     author="Fraunhofer FKIE",
