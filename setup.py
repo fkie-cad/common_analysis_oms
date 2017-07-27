@@ -1,10 +1,12 @@
-from setuptools import setup, find_packages
+from setuptools import setup
 from common_analysis_oms import __version__
 
 setup(
     name="common_analysis_oms",
     version=__version__,
-    packages=find_packages(),
+    packages=['common_analysis_oms'],
+    package_dir={'common_analysis_oms': 'common_analysis_oms'},
+    package_data={'common_analysis_oms': ['plugins/*']},
     data_files=[('common_analysis_oms/plugins', ['common_analysis_oms/plugins/ClamAV.json',
                                                  'common_analysis_oms/plugins/Sophos_en.json',
                                                  'common_analysis_oms/plugins/Avast.json',

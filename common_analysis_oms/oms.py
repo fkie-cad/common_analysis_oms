@@ -9,7 +9,7 @@ from re import findall
 from subprocess import Popen, PIPE
 from time import time
 
-plugin_version = "0.2.4"
+plugin_version = "0.2.5"
 
 system_version = plugin_version
 
