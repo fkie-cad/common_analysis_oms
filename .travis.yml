@@ -6,7 +6,7 @@ python:
 # command to install dependencies
 install:
   - "sudo apt-get -qq update"
-  - "sudo apt-get install -y clamdscan" 
+  - "sudo apt-get install -y clamav-daemon" 
   - "python setup.py -q install"
   - "pip install pytest-pep8"
 # command to run tests
