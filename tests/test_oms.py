@@ -42,7 +42,3 @@ class Test(unittest.TestCase):
         self.assertIn('scans', result, "scans not in result")
         self.assertIn('plugin_version', result, "plugin_version not in results")
         self.assertAlmostEqual(result['analysis_date'], time(), msg="Time not correct. This test might fail, if you installed many AVs", delta=120)
-
-
-if __name__ == "__main__":
-    unittest.main()

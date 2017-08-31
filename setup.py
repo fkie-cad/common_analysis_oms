@@ -1,9 +1,11 @@
 from setuptools import setup
-from common_analysis_oms import __version__
+
+VERSION = '0.2.6'
+
 
 setup(
     name="common_analysis_oms",
-    version=__version__,
+    version=VERSION,
     packages=['common_analysis_oms'],
     package_dir={'common_analysis_oms': 'common_analysis_oms'},
     package_data={'common_analysis_oms': ['plugins/*']},
@@ -18,10 +20,10 @@ setup(
                                                  'common_analysis_oms/plugins/F-Secure.json',
                                                  'common_analysis_oms/plugins/McAfee.json'])],
     install_requires=[
-        'common_analysis_base',
+        'common_analysis_base >= 0.1',
     ],
     dependency_links=[
-        'git+https://github.com/mass-project/common_analysis_base.git#common_analysis_base'
+        'https://github.com/mass-project/common_analysis_base/tarball/master#egg=common_analysis_base-0.1'
     ],
     author="Fraunhofer FKIE",
     author_email="peter.weidenbach@fkie.fraunhofer.de",
