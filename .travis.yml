@@ -6,9 +6,9 @@ python:
 # command to install dependencies
 install:
   - "sudo apt-get -qq update"
-  - "sudo apt-get install -y clamav clamav-daemon"
-  - "sudo -E freshclam"
-  - "sudo -E /etc/init.d/clamav-daemon start"
+  - "sudo apt-get install -y clamav"
+  - "sudo freshclam"
+  - "sudo apt-get install clamav-daemon"
   - "python setup.py -q install"
   - "pip install pytest-pep8 pytest-cov codecov"
 # command to run tests
