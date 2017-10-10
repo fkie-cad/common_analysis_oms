@@ -13,3 +13,5 @@ install:
   - "pip install pytest-pep8 pytest-cov codecov"
 # command to run tests
 script: "pytest --cov=./"
+after_success:
+- codecov
