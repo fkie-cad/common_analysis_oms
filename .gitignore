@@ -6,3 +6,6 @@ build
 .project
 .pydevproject
 .cache
+.pytest_cache
+.coverage
+
