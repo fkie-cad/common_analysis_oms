@@ -1,5 +1,8 @@
 # Offline Malware Scanner (OMS) Common Analysis Module
 
+[![Build Status](https://ci.die-weidenbachs.de/job/common_analysis_oms/badge/icon)](https://ci.die-weidenbachs.de/job/common_analysis_oms/)
+[![codecov](https://codecov.io/gh/fkie-cad/common_analysis_oms/branch/master/graph/badge.svg)](https://codecov.io/gh/fkie-cad/common_analysis_oms)
+
 This module scans a file with several malware scanners installed locally.
 
 ## Supported Scanners
