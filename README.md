@@ -2,6 +2,7 @@
 
 [![Build Status](https://ci.die-weidenbachs.de/job/common_analysis_oms/badge/icon)](https://ci.die-weidenbachs.de/job/common_analysis_oms/)
 [![codecov](https://codecov.io/gh/fkie-cad/common_analysis_oms/branch/master/graph/badge.svg)](https://codecov.io/gh/fkie-cad/common_analysis_oms)
+[![BCH compliance](https://bettercodehub.com/edge/badge/fkie-cad/common_analysis_oms?branch=master)](https://bettercodehub.com/)
 
 This module scans a file with several malware scanners installed locally.
 
