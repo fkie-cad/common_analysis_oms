@@ -20,10 +20,7 @@ setup(
                                                  'common_analysis_oms/plugins/F-Secure.json',
                                                  'common_analysis_oms/plugins/McAfee.json'])],
     install_requires=[
-        'common_analysis_base >= 0.1',
-    ],
-    dependency_links=[
-        'https://github.com/mass-project/common_analysis_base/tarball/master#egg=common_analysis_base-0.1'
+        'common_analysis_base @ git+https://github.com/mass-project/common_analysis_base.git'
     ],
     author="Fraunhofer FKIE",
     author_email="peter.weidenbach@fkie.fraunhofer.de",
